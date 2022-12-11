@@ -96,6 +96,8 @@ const MainMaps = () => {
         <MainSearch
           alt=""
           src="/mainpage/mainSearch.png"
+          loading="lazy"
+          decoding="async"
           onClick={() => navigate("/book")}
         />
         <Banner />
@@ -107,24 +109,44 @@ const MainMaps = () => {
                 key={idx}
                 onClick={() => navigate(`/spotsdetail/${place.placesId}`)}
               >
-                <Image alt="" src={place.image} />
+                <Image
+                  alt=""
+                  src={place.image}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <InfoDiv>
                     <Info>
                       <div>
                         {place.sports === "테니스장" ? (
                           <>
-                            <Icon alt="" src="/reservation/newTennis.png" />
+                            <Icon
+                              alt=""
+                              src="/reservation/newTennis.png"
+                              loading="lazy"
+                              decoding="async"
+                            />
                           </>
                         ) : null}
                         {place.sports === "배드민턴장" ? (
                           <>
-                            <Icon alt="" src="/reservation/newBadminton.png" />
+                            <Icon
+                              alt=""
+                              src="/reservation/newBadminton.png"
+                              loading="lazy"
+                              decoding="async"
+                            />
                           </>
                         ) : null}
                         {place.sports === "풋살장" ? (
                           <>
-                            <Icon alt="" src="/reservation/newFutsal.png" />
+                            <Icon
+                              alt=""
+                              src="/reservation/newFutsal.png"
+                              loading="lazy"
+                              decoding="async"
+                            />
                           </>
                         ) : null}
                       </div>
@@ -155,7 +177,13 @@ const MainMaps = () => {
                 >
                   <WaitingMatchMain>
                     <div>
-                      <img alt="" src="/mainpage/date.png" width="23px" />
+                      <img
+                        alt=""
+                        src="/mainpage/date.png"
+                        width="23px"
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <span>
                         {sixmatch.match?.date.substring(6, 8)}월
                         {sixmatch.match?.date.substring(10, 13)}일
@@ -165,16 +193,33 @@ const MainMaps = () => {
                   </WaitingMatchMain>
                   <WaitingMatchMain2>
                     <div>
-                      <img alt="" src="/mainpage/time.png" width="23px" />
+                      <img
+                        alt=""
+                        src="/mainpage/time.png"
+                        width="23px"
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <span>{sixmatch.match?.matchId.substring(0, 13)}</span>
                     </div>
                     <div>
-                      <img alt="" src="/mainpage/people.png" width="23px" />
+                      <img
+                        alt=""
+                        src="/mainpage/people.png"
+                        width="23px"
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <span>{sixmatch.match?.member}명</span>
                     </div>
                   </WaitingMatchMain2>
                   <SpotInfoMain>
-                    <img alt="구장이미지" src={sixmatch.place?.image} />
+                    <img
+                      alt="구장이미지"
+                      src={sixmatch.place?.image}
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <Info2>
                       <button>{sixmatch.place?.spotName}</button>
                       <div>
