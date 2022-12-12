@@ -1,6 +1,6 @@
 import Router from "./shared/router";
 
-const App = (props) => {
+const App = ({ props }) => {
   // 배포 환경에서 console.log, console.warn 지우기
   if (process.env.NODE_ENV === "production") {
     console.log = function no_console() {};
@@ -12,7 +12,7 @@ const App = (props) => {
 
   <img
     src={
-      props.image +
+      props +
       getParametersForUnsplash({
         width: 240,
         height: 240,
